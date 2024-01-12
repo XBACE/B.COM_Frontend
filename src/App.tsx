@@ -1,12 +1,11 @@
 
 import './App.css'
+import Navbar from './componets/Navbar'
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold under">
-      Hello world!
-    </h1>
+     <Navbar />
     </>
   )
 }
