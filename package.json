@@ -24,7 +24,7 @@
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@mui/icons-material": "^5.15.3",
-    "@mui/material": "^5.15.3",
+    "@mui/material": "^5.15.5",
     "@mui/system": "^5.15.4",
     "heroicons": "^2.1.1",
     "react": "^17.0.0 || ^18.0.0",
