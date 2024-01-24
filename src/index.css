@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background-image-div {
+  background-image: url('/background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.button:hover .icon {
+  filter: brightness(0) invert(1);
+}
+
