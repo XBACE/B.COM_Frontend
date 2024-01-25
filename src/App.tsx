@@ -2,6 +2,7 @@
 import { createTheme } from '@mui/system'
 import './App.css'
 import Navbar from './componets/Navbar'
+import Home from './componets/Home'
 
 const theme = createTheme({
   breakpoints:{
@@ -21,6 +22,7 @@ function App() {
     <>
     
      <Navbar />
+     <Home />
     </>
   )
 }
