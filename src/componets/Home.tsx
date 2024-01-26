@@ -1,9 +1,9 @@
-import React from 'react'
 import LandingButton from './buttons/LandingButton'
 import CultureCard from './cards/CultureCard'
 import ServiceCard from './cards/ServiceCard'
 import CountUpAnimation from './CountUpAnimation'
 
+const rows:number = 4
 const Home = () => {
   return (
     <div>
@@ -252,7 +252,7 @@ const Home = () => {
               </div>
               <div className="lg:col-span-1 col-span-2">
                 <textarea
-                  rows="4"
+                  rows={rows}
                   placeholder="Your message*"
                   className="bg-[#1A5C8ECC] w-[100%] text-gray-500 shadow-md font-bold text-12 leading-normal outline-none focus:outline-none p-3 rounded-xl"
                 ></textarea>
