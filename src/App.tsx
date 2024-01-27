@@ -1,15 +1,23 @@
+import React from "react";
+import { Navigate, BrowserRouter, Route, Routes } from "react-router-dom";
+import LoginPage from "./pages/Auth/LoginPage";
+import HomePage from "./pages/HomePage";
+import ForgotPasswordPage from "./pages/Auth/ForgotPasswordPage";
+import RegisterPage from "./pages/Auth/RegisterPage";
+import ResetPasswordPage from "./pages/Auth/ResetPasswordPage";
 
-import './App.css'
-import Home from './componets/Home'
-import Navbar from './componets/Navbar'
-
-function App() {
+const App = () => {
   return (
-    <>
-     <Navbar />
-     <Home/>
-    </>
-  )
-}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        <Route path="/reset-password/:userId/:token" element={<ResetPasswordPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
