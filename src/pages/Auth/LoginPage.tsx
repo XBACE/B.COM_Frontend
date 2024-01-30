@@ -1,10 +1,10 @@
 import React from 'react'
 import { AuthLayout } from '../../componets/AuthLayout'
-import { FormControl, TextField, Button, CircularProgress, Link } from '@mui/material'
+import { FormControl,  Button, Link } from '@mui/material'
 import { useFormik } from 'formik'
 // import { useLoginMutation } from "../../services/reducers/auth/authApiSlice";
 // import { setUserCredentials } from "../../services/slices/authSlice";
-import { useNavigate } from 'react-router-dom'
+//import { useNavigate } from 'react-router-dom'
 import { LoginSchema } from './validationSchema'
 import Visibility from '@mui/icons-material/Visibility'
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
@@ -15,7 +15,7 @@ import InputLabel from '@mui/material/InputLabel'
 
 function LoginPage() {
   //const dispatch = useDispatch();
-  const navigation = useNavigate()
+  //const navigation = useNavigate()
   //const [login, { isLoading }] = useLoginMutation();
   const [showPassword, setShowPassword] = React.useState(false)
   console.log(showPassword)
@@ -26,7 +26,8 @@ function LoginPage() {
       password: ''
     },
     validationSchema: LoginSchema,
-    onSubmit: async (value, actions) => {
+    onSubmit: async (values) => {
+      console.log(values)
       // const response = await login(value);
       // if ("data" in response) {
       //   const { accessToken } = response?.data;

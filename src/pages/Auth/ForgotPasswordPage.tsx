@@ -1,24 +1,25 @@
 import React from 'react'
 import { AuthLayout } from '../../componets/AuthLayout'
-import { FormControl, TextField, Button, CircularProgress, Link } from '@mui/material'
+import { FormControl, Button} from '@mui/material'
 import { useFormik } from 'formik'
 // import { useLoginMutation } from "../../services/reducers/auth/authApiSlice";
 // import { setUserCredentials } from "../../services/slices/authSlice";
-import { useNavigate } from 'react-router-dom'
+//import { useNavigate } from 'react-router-dom'
 import { ForgotPasswordSchema } from './validationSchema'
 import Input from '@mui/material/Input'
 import InputLabel from '@mui/material/InputLabel'
 
 function ForgotPasswordPage() {
   //const dispatch = useDispatch();
-  const navigation = useNavigate()
+  //const navigation = useNavigate()
   //const [login, { isLoading }] = useLoginMutation();
   const formik = useFormik({
     initialValues: {
       email: ''
     },
     validationSchema: ForgotPasswordSchema,
-    onSubmit: async (value, actions) => {
+    onSubmit: async (values) => {
+      console.log(values)
       // const response = await login(value);
       // if ("data" in response) {
       //   const { accessToken } = response?.data;

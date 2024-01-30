@@ -1,7 +1,7 @@
-import { FormControl, TextField, Button, CircularProgress, Link } from '@mui/material'
+import { FormControl, Button } from '@mui/material'
 import { useFormik } from 'formik'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+//import { useNavigate } from 'react-router-dom'
 import { AuthLayout } from '../../componets/AuthLayout'
 import { ResetPasswordSchema } from './validationSchema'
 //import { useRegisterMutation } from "services/reducers/auth/authApiSlice";
@@ -13,7 +13,7 @@ import Input from '@mui/material/Input'
 import InputLabel from '@mui/material/InputLabel'
 
 const ResetPasswordPage = () => {
-  const navigation = useNavigate()
+  //const navigation = useNavigate()
   //const [register, { isLoading }] = useRegisterMutation();
 
   const [showPassword, setShowPassword] = React.useState(false)
@@ -28,7 +28,8 @@ const ResetPasswordPage = () => {
       confirmPassword: ''
     },
     validationSchema: ResetPasswordSchema,
-    onSubmit: async (value, actions) => {
+    onSubmit: async values => {
+      console.log(values)
       // const response = await register(value);
       // if ("data" in response) {
       //   navigation("/login");

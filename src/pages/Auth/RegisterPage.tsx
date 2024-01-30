@@ -1,9 +1,9 @@
-import { FormControl, TextField, Button, CircularProgress, Link } from '@mui/material'
+import { FormControl, Button, Link } from '@mui/material'
 import { useFormik } from 'formik'
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+//import { useNavigate } from 'react-router-dom'
 import { AuthLayout } from '../../componets/AuthLayout'
-import { LoginSchema, RegisterSchema } from './validationSchema'
+import {  RegisterSchema } from './validationSchema'
 //import { useRegisterMutation } from "services/reducers/auth/authApiSlice";
 import Visibility from '@mui/icons-material/Visibility'
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
@@ -13,7 +13,7 @@ import Input from '@mui/material/Input'
 import InputLabel from '@mui/material/InputLabel'
 
 const RegisterPage = () => {
-  const navigation = useNavigate()
+  //const navigation = useNavigate()
   //const [register, { isLoading }] = useRegisterMutation();
 
   const [showPassword, setShowPassword] = React.useState(false)
@@ -31,7 +31,8 @@ const RegisterPage = () => {
       confirmPassword: ''
     },
     validationSchema: RegisterSchema,
-    onSubmit: async (value, actions) => {
+    onSubmit: async (values) => {
+      console.log(values)
       // const response = await register(value);
       // if ("data" in response) {
       //   navigation("/login");
