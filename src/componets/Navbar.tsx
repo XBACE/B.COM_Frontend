@@ -87,7 +87,7 @@ function Navbar() {
         </Box>
 
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Link sx={{ color: 'white', mr: 2 }} href="#">
+          <Link sx={{ color: 'white', mr: 2 }} href="/login">
             LOG IN
           </Link>
           <IconButton onClick={handleOpenUserMenu} sx={{ p: 0, color: 'white', fontSize: '16px' }}>

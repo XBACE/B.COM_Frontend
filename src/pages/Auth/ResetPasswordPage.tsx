@@ -1,0 +1,109 @@
+import { FormControl, Button } from '@mui/material'
+import { useFormik } from 'formik'
+import React from 'react'
+//import { useNavigate } from 'react-router-dom'
+import { AuthLayout } from '../../componets/AuthLayout'
+import { ResetPasswordSchema } from './validationSchema'
+//import { useRegisterMutation } from "services/reducers/auth/authApiSlice";
+import Visibility from '@mui/icons-material/Visibility'
+import VisibilityOff from '@mui/icons-material/VisibilityOff'
+import IconButton from '@mui/material/IconButton'
+import InputAdornment from '@mui/material/InputAdornment'
+import Input from '@mui/material/Input'
+import InputLabel from '@mui/material/InputLabel'
+
+const ResetPasswordPage = () => {
+  //const navigation = useNavigate()
+  //const [register, { isLoading }] = useRegisterMutation();
+
+  const [showPassword, setShowPassword] = React.useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = React.useState(false)
+
+  const handleClickShowPassword = () => setShowPassword(show => !show)
+  const handleClickshowConfirmPassword = () => setShowConfirmPassword(show => !show)
+
+  const formik = useFormik({
+    initialValues: {
+      password: '',
+      confirmPassword: ''
+    },
+    validationSchema: ResetPasswordSchema,
+    onSubmit: async values => {
+      console.log(values)
+      // const response = await register(value);
+      // if ("data" in response) {
+      //   navigation("/login");
+      //   actions.resetForm();
+      // } else {
+      //   console.error("Error occurred:", response?.error);
+      // }
+    }
+  })
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    formik.handleSubmit()
+  }
+  return (
+    <AuthLayout title="Reset password" image="/reset.svg" onSubmit={onSubmit}>
+      <FormControl fullWidth sx={{ mt: 1 }}>
+        <InputLabel htmlFor="password">Password</InputLabel>
+        <Input
+          value={formik.values.password}
+          onChange={formik.handleChange}
+          id="password"
+          type={showPassword ? 'text' : 'password'}
+          name="password"
+          endAdornment={
+            <InputAdornment position="end">
+              <IconButton
+                aria-label="toggle password visibility"
+                onClick={handleClickShowPassword}
+                edge="end"
+              >
+                {showPassword ? <Visibility /> : <VisibilityOff />}
+              </IconButton>
+            </InputAdornment>
+          }
+        />
+      </FormControl>
+      <FormControl fullWidth sx={{ mt: 1 }}>
+        <InputLabel htmlFor="password">Confirm password</InputLabel>
+        <Input
+          value={formik.values.confirmPassword}
+          onChange={formik.handleChange}
+          id="confirmPassword"
+          name="confirmPassword"
+          type={showConfirmPassword ? 'text' : 'password'}
+          endAdornment={
+            <InputAdornment position="end">
+              <IconButton
+                aria-label="toggle password visibility"
+                onClick={handleClickshowConfirmPassword}
+                edge="end"
+              >
+                {showConfirmPassword ? <Visibility /> : <VisibilityOff />}
+              </IconButton>
+            </InputAdornment>
+          }
+        />
+      </FormControl>
+      <Button
+        disabled={!(formik.isValid && formik.dirty)}
+        type="submit"
+        variant="contained"
+        color="primary"
+        sx={{
+          marginTop: 5,
+          width: '100%',
+          borderRadius: 10,
+          textTransform: 'capitalize'
+        }}
+      >
+        {/* {isLoading ? <CircularProgress size={24} color="inherit" /> : "Login"}*/}Reset password
+      </Button>
+    </AuthLayout>
+  )
+}
+
+export default ResetPasswordPage

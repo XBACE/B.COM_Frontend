@@ -12,7 +12,7 @@ const CountUpAnimation: React.FC<CountUpAnimationProps> = ({ endNumber, sign }) 
     <CountUp duration={2} end={endNumber} redraw={true} suffix={sign}>
       {({ countUpRef, start }) => (
         <VisibilitySensor onChange={start} delayedCall>
-          <span ref={countUpRef} />
+          <span ref={countUpRef}></span>
         </VisibilitySensor>
       )}
     </CountUp>

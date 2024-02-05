@@ -264,15 +264,11 @@ const Home = () => {
           </form>
         </div>
         <hr className="mt-[50px] border-[#1A5C8E]" />
-        <div className="pt-5 grid grid-cols-12 text-white">
-          <p className="flex col-span-4 lg:col-span-1 text-[12px] border-y-0 border-l-0 border mr-5">
+        <div className="py-5 text-white">
+          <p className="flex text-[12px]">
             Copyright
-            <img className='w-[10px]' src="/copyright.svg" alt="copyright" /> 2024 B.com
+            <img className='w-[10px]' src="/copyright.svg" alt="copyright" /> 2024 B.com |  Call Us: +250 000 000 | Email: support@yourdomain.com
           </p>
-          <p className="col-span-4 lg:col-span-1 text-[12px] border-y-0 border-l-0 border mr-5">
-            Call Us: +250 000 000
-          </p>
-          <p className="text-[12px] col-span-4 lg:col-span-2">Email: support@yourdomain.com</p>
         </div>
       </div>
     </div>
