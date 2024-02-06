@@ -10,6 +10,12 @@ body,html{
   background-repeat: no-repeat;
 }
 
+.pricing{
+  background-image: url('/pricing_background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .button:hover .icon {
   filter: brightness(0) invert(1);
 }
