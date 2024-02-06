@@ -8,6 +8,7 @@ import RegisterPage from "./pages/Auth/RegisterPage";
 import ResetPasswordPage from "./pages/Auth/ResetPasswordPage";
 import Pricing from "./pages/Pricing";
 import MarketStore from "./pages/MarketStore";
+import AfterLoginPage from "./AfterLoginPage";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/reset-password/:userId/:token" element={<ResetPasswordPage />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/market-store" element={<MarketStore />} />
+        <Route path='/home' element={<AfterLoginPage />} />
       </Routes>
     </BrowserRouter>
   );
