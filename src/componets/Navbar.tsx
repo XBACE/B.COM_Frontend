@@ -11,7 +11,13 @@ import MenuItem from '@mui/material/MenuItem'
 import { Link } from '@mui/material'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 
-const pages = ['HOME', 'ABOUT US', 'SERVICES', 'MARKET STORE', 'PRICING']
+const pages = [
+  { name: 'HOME', link: '/' },
+  { name: 'ABOUT US', link: '/about' },
+  { name: 'SERVICES', link: '/services' },
+  { name: 'MARKET STORE', link: '/market-store' },
+  { name: 'PRICING', link: '/pricing' }
+]
 const settings = ['English', 'French', 'Kinyarwanda']
 
 function Navbar() {
@@ -37,7 +43,7 @@ function Navbar() {
   return (
     <AppBar position="static">
       <Toolbar disableGutters className="lg:ml-[150px] lg:mr-5">
-        <img className='p-2' src="logo.svg" alt="logo" />
+        <img className="p-2" src="logo.svg" alt="logo" />
         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
           <IconButton
             size="large"
@@ -68,8 +74,10 @@ function Navbar() {
             }}
           >
             {pages.map(page => (
-              <MenuItem key={page} onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">{page}</Typography>
+              <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                <Link component="a" href={page.link} color="inherit" underline="none">
+                  <Typography textAlign="center">{page.name}</Typography>
+                </Link>
               </MenuItem>
             ))}
           </Menu>
@@ -77,11 +85,13 @@ function Navbar() {
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {pages.map(page => (
             <Button
-              key={page}
+              key={page.name}
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
-              {page}
+              <Link component="a" href={page.link} color="inherit" underline="none">
+                <Typography textAlign="center">{page.name}</Typography>
+              </Link>
             </Button>
           ))}
         </Box>
