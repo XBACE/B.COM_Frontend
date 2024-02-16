@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body,html{
   font-family: avenir;
 }
@@ -19,4 +20,25 @@ body,html{
 .button:hover .icon {
   filter: brightness(0) invert(1);
 }
+.slick-prev {
+  left: 3% !important;
+  z-index: 1;
+  background-color:#D5E6F3!important;
+  border-radius: 50%;
+  color: black!important;
+  width: 25px!important;
+  height: 25px!important;
+}
+.slick-next {
+  right: 3% !important;
+  z-index: 1;
+  background-color:#D5E6F3!important;
+  border-radius: 50%;
+  color: black!important;
+  width: 25px!important;
+  height: 25px!important;
+}
+
+
+
 

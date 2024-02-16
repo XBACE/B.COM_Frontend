@@ -6,7 +6,7 @@ function Pricing() {
   return (
     <>
       <Navbar />
-      <div className="pricing mb-[50px] mt-[-3px] px-[7%]">
+      <div className="pricing mb-[50px] mt-[-5px] px-[7%]">
         <h1 className="font-bold text-2xl lg:text-5xl leading-tight tracking-wider text-center text-white pt-[5%]">
           Get started for free
         </h1>

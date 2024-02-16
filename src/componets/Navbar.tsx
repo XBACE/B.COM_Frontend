@@ -13,8 +13,8 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 
 const pages = [
   { name: 'HOME', link: '/' },
-  { name: 'ABOUT US', link: '/about' },
-  { name: 'SERVICES', link: '/services' },
+  { name: 'ABOUT US', link: '/#about' },
+  { name: 'SERVICES', link: '/#services' },
   { name: 'MARKET STORE', link: '/market-store' },
   { name: 'PRICING', link: '/pricing' }
 ]
@@ -41,7 +41,7 @@ function Navbar() {
   }
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Toolbar disableGutters className="lg:ml-[150px] lg:mr-5">
         <img className="p-2" src="logo.svg" alt="logo" />
         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
