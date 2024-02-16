@@ -51,7 +51,8 @@ const MarketStore = () => {
   const [page, setPage] = useState<number>(1)
   const cardsPerPage: number = 6
 
-  const handleChange = (value: number): void => {
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number): void => {
+    console.log(event)
     setPage(value)
   }
 
