@@ -30,7 +30,7 @@ const Footer = () => {
               <a href="/pricing" className="hover:underline mt-2">
                 Pricing
               </a>
-              <a href="#" className="hover:underline mt-2">
+              <a href="/market-store" className="hover:underline mt-2">
                 Market store
               </a>
             </div>

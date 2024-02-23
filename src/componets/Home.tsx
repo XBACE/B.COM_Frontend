@@ -22,7 +22,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="lg:mt-[100px] mt-5">
+      <div className="lg:mt-[100px] mt-5" id="about">
         <h1 className="font-bold text-2xl lg:text-5xl leading-tight tracking-wider text-center">
           About Us
         </h1>
@@ -119,7 +119,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-[50px] pb-[100px]">
+      <div className="mt-[50px] pb-[100px]" id="services">
         <h1 className="font-bold text-2xl lg:text-5xl leading-tight tracking-wider text-center">
           Our services
         </h1>
