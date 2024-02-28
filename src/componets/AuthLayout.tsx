@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import LanguageSwitch from './language/LanguageSwitch'
+import { Link } from 'react-router-dom'
 
 type LoginFormContainerProps = {
   children: ReactNode
@@ -20,7 +21,9 @@ export const AuthLayout: React.FC<LoginFormContainerProps> = ({
     <div className=" md:h-screen flex flex-col md:flex-row bg-[#0569B6]">
       <div className="hidden md:flex md:w-1/2 flex-col">
         <div className="p-4">
-          <img src="/logo1.svg" alt="logo" />
+          <Link to="/">
+            <img src="/logo1.svg" alt="logo" />
+          </Link>
         </div>
         <div className="flex flex-grow justify-center items-center">
           <img src={image} alt="logo" className="h-[70%] w-[70%] object-cover" />
@@ -31,16 +34,14 @@ export const AuthLayout: React.FC<LoginFormContainerProps> = ({
           <LanguageSwitch />
         </div>
         <div className="flex flex-grow justify-center items-center">
-          <div className='w-[70%]'>
+          <div className="w-[70%]">
             <h1 className="text-center text-3xl mb-5 font-bold">{title}</h1>
             {google && (
               <>
                 <div className="flex justify-center">
-                  <button className="flex justify-center items-center mt-5 p-1 border rounded-[40px] w-[50%]">
-                    <img src="/google.svg" alt="google-login" width={"10%"} />
-                    <p className="text-[18px] font-[400px] text-[#6F6F6F] ml-5">
-                      {google}
-                    </p>
+                  <button className="flex justify-center items-center mt-5 p-3 border rounded-[40px] ">
+                    <img src="/google.svg" alt="google-login" width={'10%'} />
+                    <p className="font-[400px] text-[#6F6F6F] ml-5">{google}</p>
                   </button>
                 </div>
 

@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body,html{
-  font-family: avenir;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
 }
 .background-image-div {
   background-image: url('/background.svg');
