@@ -56,19 +56,19 @@ const Footer = () => {
                 <input
                   type="text"
                   placeholder="Your name*"
-                  className="bg-[#1A5C8ECC] w-[100%] text-gray-500 shadow-md font-bold text-12 leading-normal outline-none focus:outline-none p-3 rounded-xl"
+                  className="bg-[#1A5C8ECC] w-[100%] text-gray-200 shadow-md font-bold text-12 leading-normal outline-none focus:outline-none p-3 rounded-xl"
                 />
                 <input
                   type="text"
                   placeholder="Your email*"
-                  className="bg-[#1A5C8ECC] w-[100%] mt-6 text-gray-500 shadow-md font-bold text-12 leading-normal outline-none focus:outline-none p-3 rounded-xl"
+                  className="bg-[#1A5C8ECC] w-[100%] mt-6 text-gray-200 shadow-md font-bold text-12 leading-normal outline-none focus:outline-none p-3 rounded-xl"
                 />
               </div>
               <div className="lg:col-span-1 col-span-2">
                 <textarea
                   rows={4}
                   placeholder="Your message*"
-                  className="bg-[#1A5C8ECC] w-[100%] text-gray-500 shadow-md font-bold text-12 leading-normal outline-none focus:outline-none p-3 rounded-xl"
+                  className="bg-[#1A5C8ECC] w-[100%] text-gray-200 shadow-md font-bold text-12 leading-normal outline-none focus:outline-none p-3 rounded-xl"
                 ></textarea>
               </div>
             </div>
